@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+ html,body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #616C6F;
+ }
+
+.box{
+  border: 2px solid rgb(6, 6, 6);
+ height: 100%;
+ width: 25vw;
+ background: #34495e;
+ display: flex;
+flex-direction: column;
+
+}
+#ff55{
+    color: coral;
+    font-size: 2.8vw;
+    text-align: center;
+    margin-top: 1.2vw;
+}
+input{
+    height: 7vh;
+    width: 17vw;
+    text-align: center;
+    gap: 21vh;
+    font-size: 3dvh;
+     border-radius: 8px;
+
+
+}
+
+.man{
+   
+    margin-top: 8vh;
+    height: 39vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    border-radius: 8px;
+}
+
+
+button{
+    height: 2vh;
+    width: 2vw;
+    height: 5vh;
+    width: 11vw;
+    font-size: 2dvh;
+    font-weight: bolder;
+    border-radius: 8px;
+    background-color: coral;
+    
+}
+
+#ans{
+color: yellow;
+
+font-weight: bolder;
+
+}
+</style>
+
+</head>
+<body>
+    <div class="box">
+  <h1 id="ff55">Basic Calculator</h1>
+  <div class="man">
+  <input class="first" placeholder="Enter the first number"  name="first" id="first">
+  <input class="second" placeholder="Enter the second number" name="second" id="second">
+    <button type="button">Sum</button>
+   <input disabled id="ans">
+   <button id="cl" type="button">Reset</button>
+</div>
+
+
+    </div>
+
+<script>
+
+let an=document.querySelector("#ans");
+let cl=document.querySelector("#cl");
+let bt=document.querySelector("button");
+bt.addEventListener("click",box);
+function box(){
+let a=Number.parseInt(document.querySelector(".first").value);
+let b=Number.parseInt(document.querySelector(".second").value);
+
+if(a>0 && b>0){
+let sum=a+b;
+an.value=`${a} + ${b}=${sum}`;
+
+}
+}
+cl.addEventListener("click",clr);
+function clr(){
+    let a=document.querySelector(".first").value="";
+let b=document.querySelector(".second").value="";
+an.value="";
+}
+
+
+
+
+
+</script>
+</body>
+</html>
