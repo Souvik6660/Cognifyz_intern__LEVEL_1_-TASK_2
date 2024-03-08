@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vw;
+}
+
+button{
+  width: 12vw;
+  height: 4vh;
+  font-size: 1vw;
+  font-weight: bold;
+
+
+}
+button:hover{
+background-color: rgb(22, 178, 184);
+transition: all 1s ease-out; 
+
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <button>NoW click Here !</button>
+
+    <script>
+     let a=prompt("hey what is your name?");
+     let bt= document.querySelector("button");
+   
+     bt.innerText=`Click Here ${a}😊`;
+      bt.addEventListener("click",two);
+
+       function two(){
+        // let myDate=new Date();
+        //   console.log(myDate.toLocaleString()==myDate.to);
+          let timery=new Date().getHours();
+          console.log(timery);
+         if(timery>=5 && timery<12){
+        alert(`Good Morning ${a}`);
+         }
+         else if(timery>=12 &&  timery < 18){
+          alert(`Good Afternoon ${a}`);
+         }
+         else{
+          alert(`Good Evening ${a}`);
+         }
+
+       }
+
+
+
+    </script>
+</body>
+</html>
